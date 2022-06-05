@@ -19,16 +19,17 @@ void Catalogo::agregarPelicula(Pelicula p)
 {
     lista_peliculas.push_back(p);
 }
+
 void Catalogo::display()
 {
     cout << "Lista de series: " << endl;
-    for (int z = 0; lista_series.size(); z++)
+    for (int i = 0; i < lista_series.size(); i++) //
     {
-        lista_series[z].display();
+        lista_series[i].display();
     }
 
     cout << "\nLista de Películas: " << endl;
-    for (int j = 0; lista_peliculas.size(); j++)
+    for (int j = 0; j < lista_peliculas.size(); j++) // hacer comparacion en lista
     {
         lista_peliculas[j].display();
     }

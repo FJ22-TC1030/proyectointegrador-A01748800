@@ -14,7 +14,6 @@ int main()
 {
     Pelicula pelicula1("ID35", "Shrek", "2/2008", 8.5, 57, "Terror");
     Episodio epi1("ID36", "Cap2", "6/2009", 9.5, 57, 2, 5);
-    // Episodio epi1;
     Serie serie1("ID35", "River dale", "terror");
     Catalogo catalogo;
 
@@ -22,5 +21,4 @@ int main()
     catalogo.agregarPelicula(pelicula1);
     catalogo.agregarSerie(serie1);
     catalogo.display();
-    serie1.display();
 }
