@@ -1,16 +1,22 @@
-/*#ifndef STREAMING_H
+#ifndef STREAMING_H
 #define STREAMING_H
 #include <iostream>
 using namespace std;
 #include <string>
+#include "Video.h"
+#include "Pelicula.h"
+#include "Episodio.h"
+#include "Serie.h"
+#include "Catalogo.h"
 
+class Streaming
+{
+private:
+    string nombreplat;
 
-class Streaming{
-    private:
-    string nombreplan;
-
-    public:
+public:
+    Streaming();
+    Streaming(string nombrep);
     void start();
-
 };
-#endif*/
+#endif
