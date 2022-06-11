@@ -31,11 +31,11 @@ void Serie::agregarEpisodio(Episodio e)
 }
 void Serie::display()
 {
-    cout << "Id: " << idSerie << endl;
+    cout << "\nId: " << idSerie << endl;
     cout << "Nombre: " << nombreSerie << endl;
     cout << "Género: " << generoSerie << endl;
 
-    cout << "\nLista de episodios: " << endl;
+    cout << "Lista de episodios de esa serie: " << endl;
     for (int i = 0; i < episodios.size(); i++)
     {
         episodios[i].display();

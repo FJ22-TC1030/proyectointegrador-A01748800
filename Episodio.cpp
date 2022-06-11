@@ -12,7 +12,7 @@ Episodio::Episodio()
     numEpN = 0;
 }
 
-Episodio::Episodio(string id, string nombre, string fecha_estreno, double cali, int duracion, int temporada, int numEp) : Video(id, nombre, fecha_estreno, cali, duracion)
+Episodio::Episodio(string id, string nombre, string fecha_estreno, float cali, int duracion, int temporada, int numEp) : Video(id, nombre, fecha_estreno, cali, duracion)
 {
     temporadaN = temporada;
     numEpN = numEp;

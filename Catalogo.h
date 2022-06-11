@@ -6,6 +6,7 @@
 #include "Serie.h"
 #include "Pelicula.h"
 using namespace std;
+using std::ifstream;
 
 class Catalogo
 {
@@ -17,5 +18,6 @@ public:
     void agregarSerie(Serie s);
     void agregarPelicula(Pelicula p);
     void display();
+    void leerCatalogo();
 };
 #endif

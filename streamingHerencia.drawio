@@ -1,20 +1,20 @@
 <mxfile host="65bd71144e">
     <diagram id="OeCe3KiwX5dtoY-UmS-2" name="Page-1">
-        <mxGraphModel dx="843" dy="597" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="738" dy="461" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="Streaming" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-                    <mxGeometry x="380" y="10" width="400" height="310" as="geometry"/>
+                    <mxGeometry x="367.5" y="120" width="400" height="150" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="- Catálogo: Catálogo&#10;- nombre_plataforma: string&#10;- nombre_usuario: string&#10;- correo: string&#10;- contrasena: string " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
-                    <mxGeometry y="26" width="400" height="94" as="geometry"/>
+                <mxCell id="3" value="- Catálogo: Catálogo&#10;- nombre_plataforma: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
+                    <mxGeometry y="26" width="400" height="44" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="2" vertex="1">
-                    <mxGeometry y="120" width="400" height="8" as="geometry"/>
+                    <mxGeometry y="70" width="400" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="+ Streaming( )&#10;+ Streaming (nombre_plataforma, nombre_usuario_correo, contrasena)&#10;&#10;+getNombPlat(): string&#10;+getNombUsua ():string&#10;+getCorreo ():string&#10;+getContra ():string&#10;+setNombPlat( string plataforma):void&#10;+setNombUsua (string usuario):void&#10;+setCorreo (string correo):void&#10;+setContra (string contras):void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
-                    <mxGeometry y="128" width="400" height="182" as="geometry"/>
+                <mxCell id="5" value="+ Streaming( )&#10;+ Streaming (nombre_plataforma)&#10;&#10;+start" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
+                    <mxGeometry y="78" width="400" height="72" as="geometry"/>
                 </mxCell>
                 <mxCell id="6" value="Catálogo" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
                     <mxGeometry x="470" y="380" width="195" height="130" as="geometry"/>
@@ -25,7 +25,7 @@
                 <mxCell id="8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="6" vertex="1">
                     <mxGeometry y="70" width="195" height="10" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" value="+ agregarSeries (Series s): void&lt;br&gt;+ agregarPelicula (Pelicula p): void&lt;br&gt;+ display():void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="6">
+                <mxCell id="30" value="+ agregarSeries (Series s): void&lt;br&gt;+ agregarPelicula (Pelicula p): void&lt;br&gt;+ display():void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="6" vertex="1">
                     <mxGeometry y="80" width="195" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="9" value="Episodio" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
