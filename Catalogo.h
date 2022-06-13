@@ -17,6 +17,7 @@ private:
 public:
     void agregarSerie(Serie s);
     void agregarPelicula(Pelicula p);
+    void setCalificacion(int cal, string v);
     void display();
     void leerCatalogo();
 };

@@ -18,8 +18,7 @@ int main()
     catalogo.leerCatalogo();
     catalogo.display();*/
 
-    Streaming streaming("Netflix");
-    streaming.start();
-
+    Streaming netflix;
+    netflix.start();
     return 0;
 }

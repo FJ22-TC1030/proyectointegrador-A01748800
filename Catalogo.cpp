@@ -26,6 +26,10 @@ void Catalogo::agregarPelicula(Pelicula p)
     lista_peliculas.push_back(p);
 }
 
+void Catalogo::setCalificacion(int cal, string v)
+{
+}
+
 void Catalogo::display()
 {
     cout << "Lista de series: " << endl;
@@ -95,14 +99,6 @@ void Catalogo::leerCatalogo()
                         lista_series[i].agregarEpisodio(episodio);
                         bandera = true;
                     }
-                    /*else
-                    {
-                        if (i - 1 == lista_series.size())
-                        {
-                            Serie serie(id, nombre, genero);
-                            agregarSerie(serie);
-                        }
-                    }*/
                 }
                 if (bandera == false)
                 {

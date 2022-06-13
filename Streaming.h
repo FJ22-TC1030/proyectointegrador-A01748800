@@ -12,11 +12,13 @@ using namespace std;
 class Streaming
 {
 private:
-    string nombreplat;
+    int opcion;
+    Catalogo catalogo;
 
 public:
     Streaming();
-    Streaming(string nombrep);
     void start();
+    void menu();
+    int setOpcion(int op);
 };
 #endif
