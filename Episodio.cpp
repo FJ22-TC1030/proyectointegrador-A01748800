@@ -27,3 +27,16 @@ void Episodio::display()
     cout << "Temporada: " << temporadaN << endl;
     cout << "Número de episodio: " << numEpN << endl;
 }
+
+bool Episodio::operator>=(float cal)
+{
+    if (getCalificacion() >= cal)
+    {
+        return true;
+    }
+
+    else
+    {
+        return false;
+    }
+}

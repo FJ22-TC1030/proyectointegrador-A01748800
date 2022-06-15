@@ -4,6 +4,7 @@
         "iosfwd": "cpp",
         "string": "cpp",
         "ostream": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "stack": "cpp"
     }
 }

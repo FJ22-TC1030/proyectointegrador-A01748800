@@ -110,6 +110,27 @@ void Catalogo::leerCatalogo()
             }
         }
     }
-
     archivo.close();
+}
+
+void Catalogo::califVideos(float calif)
+{
+    cout << "\nLista de Películas: " << endl;
+    for (int i = 0; i < lista_peliculas.size(); i++)
+    {
+        if (lista_peliculas[i] >= calif)
+        {
+            lista_peliculas[i].display();
+            cout << endl;
+        }
+    }
+    cout << "\nLista de Series y Episodios: " << endl;
+
+    for (int j = 0; j < lista_series.size(); j++)
+    {
+        if (lista_series[j] >= calif)
+        {
+            lista_series[j].display(calif);
+        }
+    }
 }

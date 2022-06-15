@@ -22,5 +22,10 @@ public:
     string getGeneroSerie();
     void agregarEpisodio(Episodio e);
     void display();
+
+    // void califEpisodio(float calif);
+
+    bool operator>=(float cal); // opción 2
+    void display(float cal);
 };
 #endif

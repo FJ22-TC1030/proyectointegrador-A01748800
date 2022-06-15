@@ -7,6 +7,9 @@ using namespace std;
 #include "Serie.h"
 #include "Catalogo.h"
 #include "Streaming.h"
+#include <fstream>
+#include <sstream>
+#include <vector>
 
 Streaming::Streaming()
 {
@@ -25,8 +28,8 @@ void Streaming::menu()
         cout << "¡Bienvenido!" << endl;
         cout << "----------------¿Qué deseas hacer?---------------" << endl;
         cout << "1 Mostrar todas las series y películas que tenemos" << endl;
-        cout << "2 Clasificar por calificación o genero los videos" << endl;
-        cout << "3 Mostrar los episodios de una serie " << endl;
+        cout << "2 Clasificar por calificación o genero los videos" << endl; // sobrecarga
+        cout << "3 Mostrar los episodios de una serie " << endl;             //
         cout << "4 Mostrar las películas con una calificación mayor" << endl;
         cout << "5 Calificar un video " << endl;
         cout << "6 Salir" << endl;
@@ -37,17 +40,18 @@ void Streaming::menu()
         {
             catalogo.display(); // método para ver si el usuario regresa al menu o sale?
         }
-        /*else
-            (opcion == 2)
-            {
-            }
-        else(opcion == 3)
+        else if (opcion == 2)
+        {
+            opcion2();
+        }
+        else if (opcion == 3)
+        {
+            opcion3();
+        }
+        /*else if (opcion == 4)
         {
         }
-        else(opcion == 4)
-        {
-        }
-        else(opcion == 5)
+        else if (opcion == 5)
         {
         }*/
         else if (opcion == 6)
@@ -56,4 +60,25 @@ void Streaming::menu()
             break;
         }
     }
+}
+
+void Streaming::opcion2()
+{
+    int o;
+    string gener;
+    float califi;
+    cout << "¿Deseas clasificarlos por calificación (1) o por génereo (2)?" << endl;
+    cin >> o;
+    if (o == 1)
+    {
+        cout << "¿Desde qué calificación quieres que te los muestre?" << endl;
+        cin >> califi;
+        catalogo.califVideos(califi);
+    }
+}
+void Streaming::opcion3()
+{
+    string serie;
+    cout << "¿Qué serie quieres que te mostremos?" << endl;
+    cin >> serie;
 }

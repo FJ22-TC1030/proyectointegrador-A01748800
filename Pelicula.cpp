@@ -19,3 +19,16 @@ void Pelicula::display()
     Video::display();
     cout << "Género: " << generoN << endl;
 }
+
+bool Pelicula::operator>=(float cal)
+{
+    if (getCalificacion() >= cal)
+    {
+        return true;
+    }
+
+    else
+    {
+        return false;
+    }
+}

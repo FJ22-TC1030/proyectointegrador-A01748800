@@ -17,5 +17,7 @@ public:
     int getTemp();
     int getNoEp();
     void display();
+
+    bool operator>=(float cal); // opción 2
 };
 #endif

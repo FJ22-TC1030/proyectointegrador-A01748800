@@ -20,5 +20,8 @@ public:
     void start();
     void menu();
     int setOpcion(int op);
+
+    void opcion2();
+    void opcion3();
 };
 #endif

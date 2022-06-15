@@ -41,3 +41,52 @@ void Serie::display()
         episodios[i].display();
     }
 }
+
+void Serie::display(float cal)
+{
+    cout << "\nId: " << idSerie << endl;
+    cout << "Nombre: " << nombreSerie << endl;
+    cout << "Género: " << generoSerie << endl;
+
+    cout << "Lista de episodios de esa serie: " << endl;
+    for (int i = 0; i < episodios.size(); i++)
+    {
+        if (episodios[i] >= cal)
+        {
+            episodios[i].display();
+        }
+    }
+}
+
+/*void Serie::califEpisodio(float calif)
+{
+    for (int i = 0; i < episodios.size(); i++)
+    {
+        float c = episodios[i].getCalificacion();
+        if (c >= calif)
+        {
+            episodios[i].display();
+            cout << endl;
+        }
+    }
+}*/
+
+bool Serie::operator>=(float cal)
+{
+    int bandera = 0;
+    for (int i = 0; i < episodios.size(); i++)
+    {
+        if (episodios[i] >= cal)
+        {
+            bandera += 1;
+        }
+    }
+    if (bandera >= 1)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}

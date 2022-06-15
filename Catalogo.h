@@ -20,5 +20,10 @@ public:
     void setCalificacion(int cal, string v);
     void display();
     void leerCatalogo();
+
+    void califVideos(float calif); // opción 2
+    bool operator>(float calif);
+    // bool operator<(Serie lista_series);
 };
+
 #endif
