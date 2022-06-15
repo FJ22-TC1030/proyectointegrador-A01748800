@@ -28,7 +28,9 @@ public:
 
     void buscaSerie(string serie);
 
-    void claseficarP_cali(float c);
+    void clasificarP_cali(float c);
+
+    void calificarVideo(string video, float cali);
 };
 
 #endif

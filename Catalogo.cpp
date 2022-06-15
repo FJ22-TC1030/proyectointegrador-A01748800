@@ -26,8 +26,17 @@ void Catalogo::agregarPelicula(Pelicula p)
     lista_peliculas.push_back(p);
 }
 
-void Catalogo::setCalificacion(int cal, string v)
+void Catalogo::calificarVideo(string video, float cali)
 {
+
+    /*for (int i = 0; i < lista_series.size(); i++)
+        {
+            if (lista_series[i].getNombreSerie() == video)
+            {
+                lista_series[i].cambiarCali(num);
+            }
+
+        }*/
 }
 
 void Catalogo::display()
@@ -68,9 +77,6 @@ void Catalogo::leerCatalogo()
         getline(token, idEpi);
         int durac = stoi(duracion);
         float cali = stof(calificacion);
-
-        // cout << idEpisodio << endl;
-        //  cout << id1 << " " << nombre << " " << duracion << " " << genero << " " << calificacion << " " << fechaEstreno << " " << nombreEpisodio << " " << temporada << " " << numEpisodio << " " << idEpisodio << endl;
 
         if (temporada == "")
         {
@@ -159,7 +165,7 @@ void Catalogo::buscaSerie(string serie)
     }
 }
 
-void Catalogo::claseficarP_cali(float c)
+void Catalogo::clasificarP_cali(float c)
 {
     cout << "Películas con esa calificación o mayores" << endl;
     for (int i = 0; i < lista_peliculas.size(); i++)

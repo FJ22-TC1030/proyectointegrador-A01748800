@@ -13,11 +13,6 @@ using std::string;
 
 int main()
 {
-    /*
-    Catalogo catalogo;
-    catalogo.leerCatalogo();
-    catalogo.display();*/
-
     Streaming netflix;
     netflix.start();
     return 0;

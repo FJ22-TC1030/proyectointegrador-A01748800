@@ -57,9 +57,10 @@ void Streaming::menu()
         {
             opcion4();
         }
-        /*else if (opcion == 5)
+        else if (opcion == 5)
         {
-        }*/
+            opcion5();
+        }
         else if (opcion == 6)
         {
             cout << "¡Vuelve pronto!" << endl;
@@ -83,8 +84,8 @@ void Streaming::opcion2()
     }
     else if (o == 2)
     {
-        cout << "¿Qué genero deseas buscar? " << endl;
-        cout << "\nAccion \nAventura \nDrama \nFantasia \nRomance \nSci-Fi \nAnimacion \nFamiliar \nMusical \nGuerra \nCrimen \nMisterio \nTerror \nComedia \nWestern \nBiografia \nHorror " << endl;
+        cout << "¿Qué genero deseas buscar? Nuestrass opciones son:" << endl;
+        cout << "\nAccion \nAventura \nDrama \nFantasia \nRomance \nSci-Fi \nAnimacion \nFamiliar \nMusical \nGuerra \nCrimen \nMisterio \nTerror \nComedia \nWestern \nBiografia \nHorror \nPor favor, escribe el genero:" << endl;
         cin >> gen;
         catalogo.clasificar_generos(gen);
     }
@@ -103,5 +104,16 @@ void Streaming::opcion4()
     float c;
     cout << "¿Desde qué calificación quieres que te muestre las películas (máximo es 10)?" << endl;
     cin >> c;
-    catalogo.claseficarP_cali(c);
+    catalogo.clasificarP_cali(c);
+}
+void Streaming::opcion5()
+{
+    string video;
+    cout << "Ingresa el nombre del capitulo o pelicula que te gustaría calificar: " << endl;
+    cin.ignore();
+    getline(cin, video);
+    float cali;
+    cout << "Ingresa la calificación que quieres darle: " << endl;
+    cin << cali;
+    catalogo.calificarVideo(video, cali); // modificar la cali
 }
