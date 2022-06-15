@@ -28,7 +28,7 @@ int Video::getDuracion() { return duracionN; }
 
 void Video::setCalificacion(float numero)
 {
-    numero = caliN;
+    caliN = numero;
 }
 
 void Video::display()

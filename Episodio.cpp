@@ -40,3 +40,6 @@ bool Episodio::operator>=(float cal)
         return false;
     }
 }
+void Episodio::cambiarCaliEpi(float num){
+    setCalificacion(num); 
+}

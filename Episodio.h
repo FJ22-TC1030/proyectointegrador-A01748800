@@ -16,6 +16,7 @@ public:
     Episodio(string id, string nombre, string fecha_estreno, float cali, int duracion, int temporada, int numEp);
     int getTemp();
     int getNoEp();
+    void cambiarCaliEpi(float num);
     void display();
 
     bool operator>=(float cal); // opción 2

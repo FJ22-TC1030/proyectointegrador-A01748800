@@ -14,7 +14,7 @@ public:
     Pelicula();
     Pelicula(string id, string nombre, string fecha_estreno, double cali, int duracion, string genero);
     string getGenero();
-
+    void cambiarCaliPeli(float num);
     void display();
 
     bool operator>=(float cal); // opción 2

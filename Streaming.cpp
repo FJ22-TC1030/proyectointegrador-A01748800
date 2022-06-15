@@ -33,8 +33,8 @@ void Streaming::menu()
         cout << "¡Bienvenido!" << endl;
         cout << "----------------¿Qué deseas hacer?---------------" << endl;
         cout << "1 Mostrar todas las series y películas que tenemos" << endl;
-        cout << "2 Clasificar por calificación o genero los videos" << endl; // sobrecarga
-        cout << "3 Mostrar los episodios de una serie " << endl;             //
+        cout << "2 Clasificar por calificación o genero los videos" << endl;
+        cout << "3 Mostrar los episodios de una serie " << endl;
         cout << "4 Mostrar las películas con una calificación mayor" << endl;
         cout << "5 Calificar un video " << endl;
         cout << "6 Salir" << endl;
@@ -114,6 +114,6 @@ void Streaming::opcion5()
     getline(cin, video);
     float cali;
     cout << "Ingresa la calificación que quieres darle: " << endl;
-    cin << cali;
-    catalogo.calificarVideo(video, cali); // modificar la cali
+    cin >> cali;
+    catalogo.calificarVideo(video, cali);
 }

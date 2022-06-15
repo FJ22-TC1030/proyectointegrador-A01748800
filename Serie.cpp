@@ -58,18 +58,17 @@ void Serie::display(float cal)
     }
 }
 
-/*void Serie::califEpisodio(float calif)
+void Serie::buscarEpisodio(string nombre, float c)
 {
     for (int i = 0; i < episodios.size(); i++)
     {
-        float c = episodios[i].getCalificacion();
-        if (c >= calif)
+        if (episodios[i].getNombre() == nombre)
         {
+            episodios[i].cambiarCaliEpi(c);
             episodios[i].display();
-            cout << endl;
         }
     }
-}*/
+}
 
 bool Serie::operator>=(float cal)
 {

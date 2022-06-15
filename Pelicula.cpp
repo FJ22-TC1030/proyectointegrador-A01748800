@@ -14,7 +14,6 @@ Pelicula::Pelicula(string id, string nombre, string fecha_estreno, double cali, 
 {
     generoN = genero;
 }
-string Pelicula::getGenero() { return generoN; }
 
 void Pelicula::display()
 {
@@ -52,4 +51,10 @@ bool Pelicula::operator==(string gen)
     {
         return false;
     }
+}
+string Pelicula::getGenero() { return generoN; }
+
+void Pelicula::cambiarCaliPeli(float num)
+{
+    setCalificacion(num);
 }

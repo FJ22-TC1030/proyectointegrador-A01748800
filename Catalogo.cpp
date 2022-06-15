@@ -26,19 +26,6 @@ void Catalogo::agregarPelicula(Pelicula p)
     lista_peliculas.push_back(p);
 }
 
-void Catalogo::calificarVideo(string video, float cali)
-{
-
-    /*for (int i = 0; i < lista_series.size(); i++)
-        {
-            if (lista_series[i].getNombreSerie() == video)
-            {
-                lista_series[i].cambiarCali(num);
-            }
-
-        }*/
-}
-
 void Catalogo::display()
 {
     cout << "Lista de series: " << endl;
@@ -119,7 +106,7 @@ void Catalogo::leerCatalogo()
     archivo.close();
 }
 
-void Catalogo::califVideos(float calif)
+void Catalogo::califVideos(float calif) // opcion 2.1
 {
     cout << "\nLista de Películas con mayor calificación: " << endl;
     for (int i = 0; i < lista_peliculas.size(); i++)
@@ -141,7 +128,7 @@ void Catalogo::califVideos(float calif)
     }
 }
 
-void Catalogo::clasificar_generos(string gen)
+void Catalogo::clasificar_generos(string gen) // opcion 2.2
 {
     cout << "\nLista de Películas con ese género: " << endl;
     for (int i = 0; i < lista_peliculas.size(); i++)
@@ -154,7 +141,7 @@ void Catalogo::clasificar_generos(string gen)
     }
 }
 
-void Catalogo::buscaSerie(string serie)
+void Catalogo::buscaSerie(string serie) // opción 3
 {
     for (int i = 0; i < lista_series.size(); i++)
     {
@@ -165,7 +152,7 @@ void Catalogo::buscaSerie(string serie)
     }
 }
 
-void Catalogo::clasificarP_cali(float c)
+void Catalogo::clasificarP_cali(float c) // opción 4
 {
     cout << "Películas con esa calificación o mayores" << endl;
     for (int i = 0; i < lista_peliculas.size(); i++)
@@ -175,5 +162,22 @@ void Catalogo::clasificarP_cali(float c)
             lista_peliculas[i].display();
             cout << endl;
         }
+    }
+}
+void Catalogo::calificarVideo(string video, float cali) // opción 5
+{
+    for (int i = 0; i < lista_peliculas.size(); i++)
+    {
+        if (lista_peliculas[i].getNombre() == video)
+        {
+            lista_peliculas[i].cambiarCaliPeli(cali);
+            lista_peliculas[i].display();
+        }
+    }
+    // entrar a listas episodios
+
+    for (int i = 0; i < lista_series.size(); i++)
+    {
+        lista_series[i].buscarEpisodio(video, cali);
     }
 }
