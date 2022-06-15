@@ -11,6 +11,11 @@ using namespace std;
 #include <sstream>
 #include <vector>
 
+using std::cin;
+using std::cout;
+using std::getline;
+using std::ignore;
+
 Streaming::Streaming()
 {
 }
@@ -48,10 +53,11 @@ void Streaming::menu()
         {
             opcion3();
         }
-        /*else if (opcion == 4)
+        else if (opcion == 4)
         {
+            opcion4();
         }
-        else if (opcion == 5)
+        /*else if (opcion == 5)
         {
         }*/
         else if (opcion == 6)
@@ -65,7 +71,7 @@ void Streaming::menu()
 void Streaming::opcion2()
 {
     int o;
-    string gener;
+    string gen;
     float califi;
     cout << "¿Deseas clasificarlos por calificación (1) o por génereo (2)?" << endl;
     cin >> o;
@@ -75,10 +81,27 @@ void Streaming::opcion2()
         cin >> califi;
         catalogo.califVideos(califi);
     }
+    else if (o == 2)
+    {
+        cout << "¿Qué genero deseas buscar? " << endl;
+        cout << "\nAccion \nAventura \nDrama \nFantasia \nRomance \nSci-Fi \nAnimacion \nFamiliar \nMusical \nGuerra \nCrimen \nMisterio \nTerror \nComedia \nWestern \nBiografia \nHorror " << endl;
+        cin >> gen;
+        catalogo.clasificar_generos(gen);
+    }
 }
 void Streaming::opcion3()
 {
     string serie;
     cout << "¿Qué serie quieres que te mostremos?" << endl;
-    cin >> serie;
+    cin.ignore();
+    getline(cin, serie);
+    catalogo.buscaSerie(serie);
+}
+
+void Streaming::opcion4()
+{
+    float c;
+    cout << "¿Desde qué calificación quieres que te muestre las películas (máximo es 10)?" << endl;
+    cin >> c;
+    catalogo.claseficarP_cali(c);
 }

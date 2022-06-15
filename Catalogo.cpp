@@ -115,7 +115,7 @@ void Catalogo::leerCatalogo()
 
 void Catalogo::califVideos(float calif)
 {
-    cout << "\nLista de Películas: " << endl;
+    cout << "\nLista de Películas con mayor calificación: " << endl;
     for (int i = 0; i < lista_peliculas.size(); i++)
     {
         if (lista_peliculas[i] >= calif)
@@ -124,13 +124,50 @@ void Catalogo::califVideos(float calif)
             cout << endl;
         }
     }
-    cout << "\nLista de Series y Episodios: " << endl;
+    cout << "\nLista de Series y Episodios con mayor calificación: " << endl;
 
     for (int j = 0; j < lista_series.size(); j++)
     {
         if (lista_series[j] >= calif)
         {
             lista_series[j].display(calif);
+        }
+    }
+}
+
+void Catalogo::clasificar_generos(string gen)
+{
+    cout << "\nLista de Películas con ese género: " << endl;
+    for (int i = 0; i < lista_peliculas.size(); i++)
+    {
+        if (lista_peliculas[i] == gen)
+        {
+            lista_peliculas[i].display();
+            cout << endl;
+        }
+    }
+}
+
+void Catalogo::buscaSerie(string serie)
+{
+    for (int i = 0; i < lista_series.size(); i++)
+    {
+        if (lista_series[i].getNombreSerie() == serie)
+        {
+            lista_series[i].display();
+        }
+    }
+}
+
+void Catalogo::claseficarP_cali(float c)
+{
+    cout << "Películas con esa calificación o mayores" << endl;
+    for (int i = 0; i < lista_peliculas.size(); i++)
+    {
+        if (lista_peliculas[i] >= c)
+        {
+            lista_peliculas[i].display();
+            cout << endl;
         }
     }
 }

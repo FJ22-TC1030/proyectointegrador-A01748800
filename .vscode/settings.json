@@ -5,6 +5,7 @@
         "string": "cpp",
         "ostream": "cpp",
         "filesystem": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "istream": "cpp"
     }
 }

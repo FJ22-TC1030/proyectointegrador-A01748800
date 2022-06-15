@@ -12,7 +12,7 @@ Video::Video()
     caliN = 0;
     duracionN = 0;
 }
-Video::Video(string id, string nombre, string fecha_estreno, double cali, int duracion)
+Video::Video(string id, string nombre, string fecha_estreno, float cali, int duracion)
 {
     idN = id;
     nombreN = nombre;
@@ -23,8 +23,13 @@ Video::Video(string id, string nombre, string fecha_estreno, double cali, int du
 string Video::getId() { return idN; }
 string Video::getNombre() { return nombreN; }
 string Video::getFechaE() { return fecha_estrenoN; }
-double Video::getCalificacion() { return caliN; }
+float Video::getCalificacion() { return caliN; }
 int Video::getDuracion() { return duracionN; }
+
+void Video::setCalificacion(float numero)
+{
+    numero = caliN;
+}
 
 void Video::display()
 {

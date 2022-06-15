@@ -18,5 +18,6 @@ public:
     void display();
 
     bool operator>=(float cal); // opción 2
+    bool operator==(string gen);
 };
 #endif

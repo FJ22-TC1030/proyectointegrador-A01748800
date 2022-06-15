@@ -23,5 +23,6 @@ public:
 
     void opcion2();
     void opcion3();
+    void opcion4();
 };
 #endif
