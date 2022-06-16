@@ -1,6 +1,8 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <fstream>
+#include <sstream>
 #include "Serie.h"
 #include "Episodio.h"
 using std::cout;
@@ -81,6 +83,26 @@ bool Serie::operator>=(float cal)
         }
     }
     if (bandera >= 1)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool Serie::operator==(string gen) // para opción 2.2
+{
+    stringstream token(generoSerie);
+    string gen1, gen2, gen3, gen4, gen5, gen6;
+    getline(token, gen1, '/');
+    getline(token, gen2, '/');
+    getline(token, gen3, '/');
+    getline(token, gen4, '/');
+    getline(token, gen5, '/');
+    getline(token, gen6, '/');
+    if (gen == gen1 | gen == gen2 | gen == gen3 | gen == gen4 | gen == gen5 | gen == gen6)
     {
         return true;
     }

@@ -6,6 +6,7 @@
         "ostream": "cpp",
         "filesystem": "cpp",
         "stack": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "type_traits": "cpp"
     }
 }

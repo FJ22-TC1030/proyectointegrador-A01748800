@@ -12,7 +12,7 @@ using namespace std;
 class Streaming
 {
 private:
-    int opcion;
+    string opcion;
     Catalogo catalogo;
 
 public:

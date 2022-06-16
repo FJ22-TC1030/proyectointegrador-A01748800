@@ -108,28 +108,48 @@ void Catalogo::leerCatalogo()
 
 void Catalogo::califVideos(float calif) // opcion 2.1
 {
-    cout << "\nLista de Películas con mayor calificación: " << endl;
-    for (int i = 0; i < lista_peliculas.size(); i++)
+    if (calif < 1 || calif > 10)
     {
-        if (lista_peliculas[i] >= calif)
-        {
-            lista_peliculas[i].display();
-            cout << endl;
-        }
+        cout << "No es válida esa calificación. Necesita ser del 1-10" << endl;
     }
-    cout << "\nLista de Series y Episodios con mayor calificación: " << endl;
-
-    for (int j = 0; j < lista_series.size(); j++)
+    else
     {
-        if (lista_series[j] >= calif)
+        int contadorS = 0, contadorP = 0;
+
+        cout << "\nLista de Películas con mayor calificación: " << endl;
+        for (int i = 0; i < lista_peliculas.size(); i++)
         {
-            lista_series[j].display(calif);
+            if (lista_peliculas[i] >= calif)
+            {
+                lista_peliculas[i].display();
+                cout << endl;
+                contadorP += 1;
+            }
+        }
+        if (contadorP == 0)
+        {
+            cout << "Lo sentimos, no tenemos películas con esa calificación" << endl;
+        }
+        cout << "\nLista de Series y Episodios con mayor calificación: " << endl;
+
+        for (int j = 0; j < lista_series.size(); j++)
+        {
+            if (lista_series[j] >= calif)
+            {
+                lista_series[j].display(calif);
+                contadorS += 1;
+            }
+        }
+        if (contadorS == 0)
+        {
+            cout << "Lo sentimos, no tenemos episodios con esa calificación" << endl;
         }
     }
 }
 
 void Catalogo::clasificar_generos(string gen) // opcion 2.2
 {
+    int contador = 0;
     cout << "\nLista de Películas con ese género: " << endl;
     for (int i = 0; i < lista_peliculas.size(); i++)
     {
@@ -137,30 +157,68 @@ void Catalogo::clasificar_generos(string gen) // opcion 2.2
         {
             lista_peliculas[i].display();
             cout << endl;
+            contador += 1;
         }
+    }
+    if (contador == 0)
+    {
+        cout << "Lo sentimos, no tenemos películas con ese género" << endl;
+    }
+    contador = 0;
+    for (int i = 0; i < lista_series.size(); i++)
+    {
+        if (lista_series[i] == gen)
+        {
+            lista_series[i].display();
+            cout << endl;
+            contador += 1;
+        }
+    }
+    if (contador == 0)
+    {
+        cout << "Lo sentimos, no tenemos series con ese género" << endl;
     }
 }
 
 void Catalogo::buscaSerie(string serie) // opción 3
 {
+    int contador = 0;
     for (int i = 0; i < lista_series.size(); i++)
     {
         if (lista_series[i].getNombreSerie() == serie)
         {
             lista_series[i].display();
+            contador += 1;
         }
+    }
+    if (contador == 0)
+    {
+        cout << "Lo sentimos, no es válida esa serie" << endl;
     }
 }
 
 void Catalogo::clasificarP_cali(float c) // opción 4
 {
-    cout << "Películas con esa calificación o mayores" << endl;
-    for (int i = 0; i < lista_peliculas.size(); i++)
+    if (c > 10)
     {
-        if (lista_peliculas[i] >= c)
+        cout << "No es válida esa calificación. Debe ser menor a 10" << endl;
+    }
+    else
+    {
+        cout << "Películas con esa calificación o mayores" << endl;
+        int contador = 0;
+        for (int i = 0; i < lista_peliculas.size(); i++)
         {
-            lista_peliculas[i].display();
-            cout << endl;
+            if (lista_peliculas[i] >= c)
+            {
+                lista_peliculas[i].display();
+                cout << endl;
+                contador += 1;
+            }
+        }
+        if (contador == 0)
+        {
+            cout << "Lo sentimos, no tenemos películas con esa calificación o superior" << endl;
         }
     }
 }

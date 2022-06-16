@@ -27,5 +27,7 @@ public:
     void display(float cal);
 
     void buscarEpisodio(string nombre, float c);
+
+    bool operator==(string gen);
 };
 #endif
