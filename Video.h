@@ -25,6 +25,6 @@ public:
     float getCalificacion();
     int getDuracion();
     void setCalificacion(float numero);
-    void display();
+    virtual void display() = 0;
 };
 #endif

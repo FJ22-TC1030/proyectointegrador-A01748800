@@ -112,67 +112,64 @@ void Streaming::opcion2()
         }
         else if (o == "2")
         {
-                cout << "¿Qué genero deseas buscar? Nuestrass opciones son:" << endl;
-                cout << "\nAccion \nAventura \nDrama \nFantasia \nRomance \nSci-Fi \nAnimacion \nFamiliar \nMusical \nGuerra \nCrimen \nMisterio \nTerror \nComedia \nWestern \nBiografia \nHorror \nPor favor, escribe el genero:" << endl;
-                cin >> gen;
-                if (gen != "Accion" && gen != "Aventura" && gen != "Drama" && gen != "Fantasia" && gen != "Romance" && gen != "Sci-Fi" && gen != "Animacion" && gen != "Familiar" && gen != "Musical" && gen != "Guerra" && gen != "Crimen" && gen != "Misterio" && gen != "Terror" && gen != "Comedia" && gen != "Western" && gen != "Biografia" && gen != "Horror")
-                {
-                    ExcepcionStreaming exc("Ese genero no es valido");
-                    throw(exc);
-                }
-                catalogo.clasificar_generos(gen);
-            
-        }
-            
-        
-    }
-        catch (ExcepcionStreaming const &exc)
-        {
-        exc.mensaje();
-        }
-        catch (std::invalid_argument const &error)
-        {
-        cout << "Error, debe ser un número" << endl;
-        }
-    }
-    void Streaming::opcion3()
-    {
-        string serie;
-        cout << "¿Qué serie quieres que te mostremos?" << endl;
-        cin.ignore();
-        getline(cin, serie);
-        catalogo.buscaSerie(serie);
-    }
-
-    void Streaming::opcion4()
-    {
-        float c;
-        cout << "¿Desde qué calificación quieres que te muestre las películas (máximo es 10)?" << endl;
-        cin >> c;
-        catalogo.clasificarP_cali(c);
-    }
-    void Streaming::opcion5()
-    {
-        try
-        {
-            string video;
-            cout << "Ingresa el nombre del capitulo o pelicula que te gustaría calificar: " << endl;
-            cin.ignore();
-            getline(cin, video);
-            float cali;
-            cout << "Ingresa la calificación que quieres darle: " << endl;
-            cin >> cali;
-
-            if (cali < 1 || cali > 10)
+            cout << "¿Qué genero deseas buscar? Nuestrass opciones son:" << endl;
+            cout << "\nAccion \nAventura \nDrama \nFantasia \nRomance \nSci-Fi \nAnimacion \nFamiliar \nMusical \nGuerra \nCrimen \nMisterio \nTerror \nComedia \nWestern \nBiografia \nSuspenso \nPor favor, escribe el genero:" << endl;
+            cin >> gen;
+            if (gen != "Accion" && gen != "Aventura" && gen != "Drama" && gen != "Fantasia" && gen != "Romance" && gen != "Sci-Fi" && gen != "Animacion" && gen != "Familiar" && gen != "Musical" && gen != "Guerra" && gen != "Crimen" && gen != "Misterio" && gen != "Terror" && gen != "Comedia" && gen != "Western" && gen != "Biografia" && gen != "Suspenso")
             {
-                ExcepcionStreaming exc("El valor ingresado no es valido");
+                ExcepcionStreaming exc("Ese genero no es valido");
                 throw(exc);
             }
-
-            catalogo.calificarVideo(video, cali);
-        }
-        catch (ExcepcionStreaming const &exc)
-        {
-            exc.mensaje();
+            catalogo.clasificar_generos(gen);
         }
     }
+    catch (ExcepcionStreaming const &exc)
+    {
+        exc.mensaje();
+    }
+    catch (std::invalid_argument const &error)
+    {
+        cout << "Error, debe ser un número" << endl;
+    }
+}
+void Streaming::opcion3()
+{
+    string serie;
+    cout << "¿Qué serie quieres que te mostremos?" << endl;
+    cin.ignore();
+    getline(cin, serie);
+    catalogo.buscaSerie(serie);
+}
+
+void Streaming::opcion4()
+{
+    float c;
+    cout << "¿Desde qué calificación quieres que te muestre las películas (máximo es 10)?" << endl;
+    cin >> c;
+    catalogo.clasificarP_cali(c);
+}
+void Streaming::opcion5()
+{
+    try
+    {
+        string video;
+        cout << "Ingresa el nombre del capitulo o pelicula que te gustaría calificar: " << endl;
+        cin.ignore();
+        getline(cin, video);
+        float cali;
+        cout << "Ingresa la calificación que quieres darle: " << endl;
+        cin >> cali;
+
+        if (cali < 1 || cali > 10)
+        {
+            ExcepcionStreaming exc("El valor ingresado no es valido");
+            throw(exc);
+        }
+
+        catalogo.calificarVideo(video, cali);
+    }
+    catch (ExcepcionStreaming const &exc)
+    {
+        exc.mensaje();
+    }
+}
