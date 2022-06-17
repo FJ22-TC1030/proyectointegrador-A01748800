@@ -165,6 +165,7 @@ void Catalogo::clasificar_generos(string gen) // opcion 2.2
         cout << "Lo sentimos, no tenemos películas con ese género" << endl;
     }
     contador = 0;
+    cout << "\nLista de series con ese género: " << endl;
     for (int i = 0; i < lista_series.size(); i++)
     {
         if (lista_series[i] == gen)
